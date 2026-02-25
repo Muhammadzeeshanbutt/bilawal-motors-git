@@ -24,7 +24,7 @@ export function render(_url) {
           <span class="hero-title-line">Premium Vehicle</span>
           <span class="hero-title-line hero-title-line--large">Import & Export</span>
         </h1>
-        <p class="hero-tagline">Your trusted partner for premium car imports and exports worldwide.</p>
+        <p class="hero-tagline">We are a Singapore-based company specializing in exporting quality vehicles and auto spare parts around the world.</p>
         <div class="hero-buttons">
           <a href="#gallery" class="btn btn-primary">View Stock</a>
           <a href="#contact" class="btn btn-secondary">Contact Us</a>
