@@ -1,7 +1,66 @@
+/** Gallery images for full gallery page (with details) */
+const GALLERY_IMAGES = [
+  { src: '/gallery-1.png', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '$85,000', year: '2022', km: '15,000 km', location: 'Singapore' },
+  { src: '/gallery-2.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '$42,000', year: '2023', km: '8,000 km', location: 'Singapore' },
+  { src: '/gallery-3.png', alt: 'Mazda 3 Sedan', tag: 'Japanese Sedan', title: 'Mazda 3 Sedan', price: '$45,000', year: '2023', km: '12,000 km', location: 'Singapore' },
+  { src: '/gallery-4.png', alt: 'Auto Parts Shipment', tag: 'Spare Parts', title: 'Auto Parts Shipment', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
+  { src: '/gallery-5.png', alt: 'Body Panels & Engines', tag: 'Spare Parts', title: 'Body Panels & Engines', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
+  { src: '/gallery-6.png', alt: 'Salvage Vehicles', tag: 'Salvage Stock', title: 'Salvage Vehicles', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
+  { src: '/gallery-7.png', alt: 'Dismantled Vehicles', tag: 'Parts Stock', title: 'Dismantled Vehicles', price: 'Various', year: 'Various', km: 'Parts', location: 'Singapore' },
+  { src: '/gallery-8.png', alt: 'Premium Salvage', tag: 'Salvage', title: 'Premium Salvage Stock', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
+  { src: '/gallery-9.png', alt: 'Steering & Body Parts', tag: 'Spare Parts', title: 'Steering & Body Parts', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
+]
+
 /**
  * @param {string} _url
  */
 export function render(_url) {
+  const raw = (_url || '').split('?')[0].trim()
+  const pathname = raw.startsWith('/') ? raw.replace(/\/$/, '') || '/' : '/' + raw
+  const isGalleryPage = pathname === '/gallery' || pathname === '/gallery.html'
+
+  if (isGalleryPage) {
+    const imagesHtml = GALLERY_IMAGES.map((item) => `
+        <div class="full-gallery-item">
+          <div class="full-gallery-img-wrap">
+            <img src="${item.src}" alt="${item.alt}" class="full-gallery-img" loading="lazy" />
+            <span class="full-gallery-tag">${item.tag}</span>
+          </div>
+          <div class="full-gallery-details">
+            <h3 class="full-gallery-card-title">${item.title}</h3>
+            <p class="full-gallery-card-price">${item.price}</p>
+            <ul class="full-gallery-card-meta">
+              <li><span class="full-gallery-meta-icon full-gallery-meta--year"></span> ${item.year}</li>
+              <li><span class="full-gallery-meta-icon full-gallery-meta--odo"></span> ${item.km}</li>
+              <li><span class="full-gallery-meta-icon full-gallery-meta--pin"></span> ${item.location}</li>
+            </ul>
+            <a href="/#contact" class="full-gallery-btn">Request Details</a>
+          </div>
+        </div>`).join('')
+    const html = `
+    <header class="full-gallery-header">
+      <div class="full-gallery-header-inner">
+        <a href="/" class="full-gallery-logo">
+          <img src="/logo.svg" alt="BM Bilawal Motors" class="nav-logo-img" />
+        </a>
+        <a href="/" class="full-gallery-back">
+          <span class="full-gallery-back-icon">←</span> Back to Home
+        </a>
+      </div>
+    </header>
+    <main class="full-gallery-main">
+      <div class="full-gallery-hero">
+        <h1 class="full-gallery-title">Complete Gallery</h1>
+        <p class="full-gallery-tagline">Our full inventory of vehicles and auto parts</p>
+      </div>
+      <div class="full-gallery-grid">
+${imagesHtml}
+      </div>
+    </main>
+  `
+    return { html }
+  }
+
   const html = `
     <section class="hero">
       <div class="hero-bg"></div>
@@ -30,6 +89,141 @@ export function render(_url) {
           <a href="#contact" class="btn btn-secondary">Contact Us</a>
         </div>
       </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <h2 class="gallery-title">Stock & Gallery</h2>
+      <p class="gallery-subtitle">Browse our current inventory of premium vehicles and auto parts</p>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-1.png" alt="Nissan Qashqai" class="gallery-card-image" />
+            <span class="gallery-tag">Japanese SUV</span>
+          </div>
+          <h3 class="gallery-card-title">Nissan Qashqai</h3>
+          <p class="gallery-card-price">$85,000</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2022</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 15,000 km</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-2.png" alt="Mazda 3" class="gallery-card-image" />
+            <span class="gallery-tag">Japanese Hatchback</span>
+          </div>
+          <h3 class="gallery-card-title">Mazda 3</h3>
+          <p class="gallery-card-price">$42,000</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 8,000 km</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-3.png" alt="Mazda 3 Sedan" class="gallery-card-image" />
+            <span class="gallery-tag">Japanese Sedan</span>
+          </div>
+          <h3 class="gallery-card-title">Mazda 3 Sedan</h3>
+          <p class="gallery-card-price">$45,000</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 12,000 km</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-4.png" alt="Auto Parts Shipment" class="gallery-card-image" />
+            <span class="gallery-tag">Spare Parts</span>
+          </div>
+          <h3 class="gallery-card-title">Auto Parts Shipment</h3>
+          <p class="gallery-card-price">Various</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-5.png" alt="Body Panels & Engines" class="gallery-card-image" />
+            <span class="gallery-tag">Spare Parts</span>
+          </div>
+          <h3 class="gallery-card-title">Body Panels & Engines</h3>
+          <p class="gallery-card-price">Various</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-6.png" alt="Salvage Vehicles" class="gallery-card-image" />
+            <span class="gallery-tag">Salvage Stock</span>
+          </div>
+          <h3 class="gallery-card-title">Salvage Vehicles</h3>
+          <p class="gallery-card-price">Inquiry</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> Various</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> As-is</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-7.png" alt="Dismantled Vehicles" class="gallery-card-image" />
+            <span class="gallery-tag">Parts Stock</span>
+          </div>
+          <h3 class="gallery-card-title">Dismantled Vehicles</h3>
+          <p class="gallery-card-price">Various</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> Various</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> Parts</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-8.png" alt="Premium Salvage" class="gallery-card-image" />
+            <span class="gallery-tag">Salvage</span>
+          </div>
+          <h3 class="gallery-card-title">Premium Salvage Stock</h3>
+          <p class="gallery-card-price">Inquiry</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> Various</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> As-is</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-9.png" alt="Steering & Body Parts" class="gallery-card-image" />
+            <span class="gallery-tag">Spare Parts</span>
+          </div>
+          <h3 class="gallery-card-title">Steering & Body Parts</h3>
+          <p class="gallery-card-price">Various</p>
+          <ul class="gallery-card-details">
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
+            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+          </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+      </div>
+      <p class="gallery-footer-text">Looking for something specific? We have access to thousands of vehicles.</p>
+      <a href="/gallery" class="gallery-cta-btn">See complete gallery</a>
     </section>
 
     <section class="services" id="services">
@@ -76,99 +270,6 @@ export function render(_url) {
           <li><span class="offer-check"></span> After-sales service and support</li>
         </ul>
       </div>
-    </section>
-
-    <section class="gallery" id="gallery">
-      <h2 class="gallery-title">Stock & Gallery</h2>
-      <p class="gallery-subtitle">Browse our current inventory of premium vehicles and auto parts</p>
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-1.png" alt="Nissan GT-R" class="gallery-card-image" />
-            <span class="gallery-tag">Japanese Sports</span>
-          </div>
-          <h3 class="gallery-card-title">Nissan GT-R</h3>
-          <p class="gallery-card-price">$85,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2022</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 15,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-2.png" alt="Mercedes-Benz S-Class" class="gallery-card-image" />
-            <span class="gallery-tag">Continental Luxury</span>
-          </div>
-          <h3 class="gallery-card-title">Mercedes-Benz S-Class</h3>
-          <p class="gallery-card-price">$120,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 8,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-3.png" alt="Hyundai Tucson" class="gallery-card-image" />
-            <span class="gallery-tag">Korean SUV</span>
-          </div>
-          <h3 class="gallery-card-title">Hyundai Tucson</h3>
-          <p class="gallery-card-price">$45,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 12,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-1.png" alt="Porsche 911" class="gallery-card-image" />
-            <span class="gallery-tag">Continental Sports</span>
-          </div>
-          <h3 class="gallery-card-title">Porsche 911</h3>
-          <p class="gallery-card-price">$145,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2022</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 10,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-2.png" alt="Auto Parts" class="gallery-card-image" />
-            <span class="gallery-tag">Spare Parts</span>
-          </div>
-          <h3 class="gallery-card-title">Auto Parts & Accessories</h3>
-          <p class="gallery-card-price">Various</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-3.png" alt="Toyota Camry" class="gallery-card-image" />
-            <span class="gallery-tag">Japanese Sedan</span>
-          </div>
-          <h3 class="gallery-card-title">Toyota Camry</h3>
-          <p class="gallery-card-price">$38,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 5,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-      </div>
-      <p class="gallery-footer-text">Looking for something specific? We have access to thousands of vehicles.</p>
-      <a href="#contact" class="gallery-cta-btn">Contact Us for More Options</a>
     </section>
 
     <section class="stay-connected">
