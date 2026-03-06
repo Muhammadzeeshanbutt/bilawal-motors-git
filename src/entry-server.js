@@ -1,4 +1,4 @@
-/** Gallery images for full gallery page (with details) */
+/** Gallery images (used in home gallery section and lightbox) */
 const GALLERY_IMAGES = [
   { src: '/gallery-1.png', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '$85,000', year: '2022', km: '15,000 km', location: 'Singapore' },
   { src: '/gallery-2.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '$42,000', year: '2023', km: '8,000 km', location: 'Singapore' },
@@ -11,56 +11,14 @@ const GALLERY_IMAGES = [
   { src: '/gallery-9.png', alt: 'Steering & Body Parts', tag: 'Spare Parts', title: 'Steering & Body Parts', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
 ]
 
+/** Gallery images as simple list for lightbox (src, alt) */
+const GALLERY_IMAGES_DATA = GALLERY_IMAGES.map((item) => ({ src: item.src, alt: item.alt }))
+const GALLERY_IMAGES_JSON = JSON.stringify(GALLERY_IMAGES_DATA).replace(/</g, '\\u003c')
+
 /**
  * @param {string} _url
  */
 export function render(_url) {
-  const raw = (_url || '').split('?')[0].trim()
-  const pathname = raw.startsWith('/') ? raw.replace(/\/$/, '') || '/' : '/' + raw
-  const isGalleryPage = pathname === '/gallery' || pathname === '/gallery.html'
-
-  if (isGalleryPage) {
-    const imagesHtml = GALLERY_IMAGES.map((item) => `
-        <div class="full-gallery-item">
-          <div class="full-gallery-img-wrap">
-            <img src="${item.src}" alt="${item.alt}" class="full-gallery-img" loading="lazy" />
-            <span class="full-gallery-tag">${item.tag}</span>
-          </div>
-          <div class="full-gallery-details">
-            <h3 class="full-gallery-card-title">${item.title}</h3>
-            <p class="full-gallery-card-price">${item.price}</p>
-            <ul class="full-gallery-card-meta">
-              <li><span class="full-gallery-meta-icon full-gallery-meta--year"></span> ${item.year}</li>
-              <li><span class="full-gallery-meta-icon full-gallery-meta--odo"></span> ${item.km}</li>
-              <li><span class="full-gallery-meta-icon full-gallery-meta--pin"></span> ${item.location}</li>
-            </ul>
-            <a href="/#contact" class="full-gallery-btn">Request Details</a>
-          </div>
-        </div>`).join('')
-    const html = `
-    <header class="full-gallery-header">
-      <div class="full-gallery-header-inner">
-        <a href="/" class="full-gallery-logo">
-          <img src="/logo.svg" alt="BM Bilawal Motors" class="nav-logo-img" />
-        </a>
-        <a href="/" class="full-gallery-back">
-          <span class="full-gallery-back-icon">←</span> Back to Home
-        </a>
-      </div>
-    </header>
-    <main class="full-gallery-main">
-      <div class="full-gallery-hero">
-        <h1 class="full-gallery-title">Complete Gallery</h1>
-        <p class="full-gallery-tagline">Our full inventory of vehicles and auto parts</p>
-      </div>
-      <div class="full-gallery-grid">
-${imagesHtml}
-      </div>
-    </main>
-  `
-    return { html }
-  }
-
   const html = `
     <section class="hero">
       <div class="hero-bg"></div>
@@ -223,8 +181,20 @@ ${imagesHtml}
         </div>
       </div>
       <p class="gallery-footer-text">Looking for something specific? We have access to thousands of vehicles.</p>
-      <a href="/gallery" class="gallery-cta-btn">See complete gallery</a>
+      <button type="button" class="gallery-cta-btn" id="open-gallery-lightbox">See complete gallery</button>
     </section>
+
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image gallery" aria-hidden="true">
+      <div class="gallery-lightbox-backdrop"></div>
+      <button type="button" class="gallery-lightbox-close" aria-label="Close gallery"><span aria-hidden="true">&times;</span></button>
+      <div class="gallery-lightbox-content">
+        <button type="button" class="gallery-lightbox-prev" aria-label="Previous image"><span aria-hidden="true">&larr;</span></button>
+        <img class="gallery-lightbox-img" id="gallery-lightbox-img" src="${GALLERY_IMAGES_DATA[0].src}" alt="${GALLERY_IMAGES_DATA[0].alt.replace(/"/g, '&quot;')}" />
+        <button type="button" class="gallery-lightbox-next" aria-label="Next image"><span aria-hidden="true">&rarr;</span></button>
+      </div>
+      <div class="gallery-lightbox-counter"><span id="gallery-lightbox-counter">1 / ${GALLERY_IMAGES_DATA.length}</span></div>
+    </div>
+    <script type="application/json" id="gallery-images-data">${GALLERY_IMAGES_JSON}</script>
 
     <section class="services" id="services">
       <h2 class="services-title">Our Services</h2>
