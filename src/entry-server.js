@@ -1,14 +1,76 @@
 /** Gallery images (used in home gallery section and lightbox) */
 const GALLERY_IMAGES = [
-  { src: '/gallery-1.png', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '$85,000', year: '2022', km: '15,000 km', location: 'Singapore' },
-  { src: '/gallery-2.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '$42,000', year: '2023', km: '8,000 km', location: 'Singapore' },
-  { src: '/gallery-3.png', alt: 'Mazda 3 Sedan', tag: 'Japanese Sedan', title: 'Mazda 3 Sedan', price: '$45,000', year: '2023', km: '12,000 km', location: 'Singapore' },
-  { src: '/gallery-4.png', alt: 'Auto Parts Shipment', tag: 'Spare Parts', title: 'Auto Parts Shipment', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
+  { src: '/gallery-1.jpeg', alt: 'BMW X1', tag: 'BMW', title: 'BMW X1', price: 'Inquiry', year: '', km: '65,000 km', location: 'Singapore' },
+  { src: '/gallery-2.jpeg', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '52,000 km', location: 'Singapore' },
+  { src: '/gallery-8.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '', year: '', km: '62,000 km', location: 'Singapore' },
+  { src: '/gallery-4.png', alt: 'Gold A7', tag: 'Continental', title: 'Gold A7', price: '', year: '', km: '71,000 km', location: 'Singapore' },
   { src: '/gallery-5.png', alt: 'Body Panels & Engines', tag: 'Spare Parts', title: 'Body Panels & Engines', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
   { src: '/gallery-6.png', alt: 'Salvage Vehicles', tag: 'Salvage Stock', title: 'Salvage Vehicles', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
-  { src: '/gallery-7.png', alt: 'Dismantled Vehicles', tag: 'Parts Stock', title: 'Dismantled Vehicles', price: 'Various', year: 'Various', km: 'Parts', location: 'Singapore' },
-  { src: '/gallery-8.png', alt: 'Premium Salvage', tag: 'Salvage', title: 'Premium Salvage Stock', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
-  { src: '/gallery-9.png', alt: 'Steering & Body Parts', tag: 'Spare Parts', title: 'Steering & Body Parts', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
+  { src: '/gallery-7.png', alt: 'Container Loading', tag: 'Spare Parts', title: 'Container Loading', price: '', year: '', km: '', location: '' },
+  { src: '/gallery-3.png', alt: 'Mazda 3 Sedan', tag: 'Japanese Sedan', title: 'Mazda 3 Sedan', price: '$45,000', year: '2023', km: '12,000 km', location: 'Singapore' },
+  { src: '/gallery-9.png', alt: 'Engines', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: '' },
+  { src: '/gallery-extra-1.png', alt: 'BMW 1 Series hatchback, Singapore', tag: 'BMW', title: 'BMW 1 Series', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-2.png', alt: 'Mazda 3 red, Singapore', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-3.png', alt: 'Nissan Qashqai silver, Singapore', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-4.png', alt: 'Mazda 3 sedan container loading, Singapore', tag: 'Japanese Sedan', title: 'Mazda 3', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-5.png', alt: 'BMW white, Singapore', tag: 'BMW', title: 'BMW', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-6.png', alt: 'Nissan Qashqai bronze DIG-T, Singapore', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-7.png', alt: 'Mazda 3 silver sedan, Singapore', tag: 'Japanese Sedan', title: 'Mazda 3', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-8.png', alt: 'BMW 1 Series white, Singapore', tag: 'BMW', title: 'BMW 1 Series', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-9.png', alt: 'Toyota silver sedan, Singapore', tag: 'Japanese', title: 'Toyota', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-10.png', alt: 'Mazda sedan container loading, Singapore', tag: 'Japanese Sedan', title: 'Mazda', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-11.png', alt: 'Mitsubishi Outlander with hood open, Singapore', tag: 'Japanese SUV', title: 'Mitsubishi Outlander', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-12.png', alt: 'BMW black, Singapore', tag: 'BMW', title: 'BMW', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-13.png', alt: 'Volkswagen Golf white, Singapore', tag: 'Continental', title: 'Volkswagen Golf', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-14.png', alt: 'BMW M Sport black, Singapore', tag: 'BMW', title: 'BMW', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-15.png', alt: 'Mercedes-Benz E-Class light blue, Singapore', tag: 'Continental', title: 'Mercedes-Benz E-Class', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-16.png', alt: 'White SUV container loading, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-17.png', alt: 'Two Mazda sedans stacked in shipping container, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-18.png', alt: 'Silver car secured at angle for container shipping, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-19.png', alt: 'White BMW SUV braced inside shipping container, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-20.png', alt: 'White BMW X1 secured in shipping container, Singapore', tag: 'BMW', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-21.png', alt: 'Two white BMW cars stacked in shipping container, Singapore', tag: 'BMW', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-22.png', alt: 'Mazda front clip with Skyactiv engine, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-23.png', alt: 'Mercedes-Benz front with engine bay exposed, Singapore', tag: 'Continental', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-24.png', alt: 'Shipping container packed with doors, tyres, panels and engines, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-25.png', alt: 'Export logistics yard, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-26.png', alt: 'Automotive export facility, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-27.png', alt: 'Vehicle stock yard, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-28.png', alt: 'Motor trade operations, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-29.png', alt: 'Parts export preparation, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-30.png', alt: 'Workshop yard scene, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-31.png', alt: 'Shipping yard vehicle, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-32.png', alt: 'Export inventory, Singapore', tag: 'Spare Parts', title: 'Gallery', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-33.png', alt: 'White BMW and dark Mazda sedans stacked in shipping container, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-34.png', alt: 'Toyota Harrier with open engine bay in parts yard, Singapore', tag: 'Japanese SUV', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-35.png', alt: 'Suzuki Swift rear quarter panel, Singapore', tag: 'Japanese', title: 'Parts', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-36.png', alt: 'Lexus sedan front with exposed engine bay, Singapore', tag: 'Japanese', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-37.png', alt: 'Toyota Harrier front view, Singapore', tag: 'Japanese SUV', title: 'Toyota Harrier', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-38.png', alt: 'White Toyota Harrier in dismantling yard, Singapore', tag: 'Japanese SUV', title: 'Toyota Harrier', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-39.png', alt: 'Nissan and Mercedes-Benz front half-cuts, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-40.png', alt: 'Shipping container interior with wrapped parts and components, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-41.png', alt: 'Shipping container packed with rotors, steering wheels and parts, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-42.png', alt: 'Container load of body panels, tyres and wrapped parts, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-43.png', alt: 'Gold Mazda front clip with engine bay visible, Singapore', tag: 'Japanese', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-44.png', alt: 'Honda Civic rear with roof removed, Singapore', tag: 'Japanese', title: 'Honda Civic', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-45.png', alt: 'Dense container packing of automotive parts, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-46.png', alt: 'Mercedes-Benz E-Class grey half-cut, Singapore', tag: 'Continental', title: 'Mercedes-Benz', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-47.png', alt: 'Shipping container with doors, seats and chassis sections, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-48.png', alt: 'Blue shipping container packed with parts and tyres, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-49.png', alt: 'Shipping container stacked with car body panels and hoods, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-50.png', alt: 'Container with Toyota and Honda steering wheels, engine front cut and doors, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-51.png', alt: 'Black Toyota Camry VVT-i with open engine bay, Singapore', tag: 'Japanese', title: 'Toyota Camry', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-52.png', alt: 'Toyota Harrier maroon front view, Singapore', tag: 'Japanese SUV', title: 'Toyota Harrier', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-53.png', alt: 'Lexus sedan burgundy front, Singapore', tag: 'Japanese', title: 'Lexus', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-54.png', alt: 'Honda and Toyota Harrier front clips with exposed engines, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-55.png', alt: 'Honda Civic rear with shattered window in parts yard, Singapore', tag: 'Japanese', title: 'Honda Civic', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-56.png', alt: 'Shipping container with engines, tyres, Honda steering wheel and body panels, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-57.png', alt: 'Green shipping container filled with car body panels, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-58.png', alt: 'Shipping container packed with mixed auto parts and panels, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-59.png', alt: 'White shipping container with stacked doors and body panels, Singapore', tag: 'Spare Parts', title: 'Container loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-60.png', alt: 'Toyota VVT-i engines packed in red transport rack, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-61.png', alt: 'Blue shipping container with doors, wiring and engine assemblies, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-extra-62.png', alt: 'Blue shipping container packed with doors, rotors and engine blocks, Singapore', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
 ]
 
 /** Gallery images as simple list for lightbox (src, alt) */
@@ -53,60 +115,62 @@ export function render(_url) {
       <h2 class="gallery-title">Stock & Gallery</h2>
       <p class="gallery-subtitle">Browse our current inventory of premium vehicles and auto parts</p>
       <div class="gallery-grid">
-        <div class="gallery-card">
+        <div class="gallery-card gallery-card--thumb-detail">
+          <div class="gallery-card-image-wrap gallery-card-image-wrap--white-frame">
+            <div class="gallery-thumb-white">
+              <img src="/gallery-1.jpeg" alt="BMW X1" class="gallery-card-image gallery-card-image--thumb" />
+            </div>
+            <span class="gallery-tag">BMW</span>
+          </div>
+          <div class="gallery-thumb-meta">
+            <ul class="gallery-thumb-details-column">
+              <li class="gallery-thumb-line gallery-thumb-line--model">BMW X1</li>
+              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage 65,000 km</li>
+              <li class="gallery-thumb-line gallery-thumb-line--location">Singapore</li>
+            </ul>
+          </div>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card gallery-card--thumb-detail">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-1.png" alt="Nissan Qashqai" class="gallery-card-image" />
+            <img src="/gallery-2.jpeg" alt="Nissan Qashqai" class="gallery-card-image" />
             <span class="gallery-tag">Japanese SUV</span>
           </div>
-          <h3 class="gallery-card-title">Nissan Qashqai</h3>
-          <p class="gallery-card-price">$85,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2022</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 15,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
+          <div class="gallery-thumb-meta">
+            <ul class="gallery-thumb-details-column">
+              <li class="gallery-thumb-line gallery-thumb-line--model">Nissan Qashqai</li>
+              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage 52,000 km</li>
+              <li class="gallery-thumb-line gallery-thumb-line--location">Singapore</li>
+            </ul>
+          </div>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
-        <div class="gallery-card">
+        <div class="gallery-card gallery-card--thumb-detail">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-2.png" alt="Mazda 3" class="gallery-card-image" />
+            <img src="/gallery-8.png" alt="Mazda 3" class="gallery-card-image" />
             <span class="gallery-tag">Japanese Hatchback</span>
           </div>
-          <h3 class="gallery-card-title">Mazda 3</h3>
-          <p class="gallery-card-price">$42,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 8,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
+          <div class="gallery-thumb-meta">
+            <ul class="gallery-thumb-details-column">
+              <li class="gallery-thumb-line gallery-thumb-line--model">Mazda 3</li>
+              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage 62,000 km</li>
+              <li class="gallery-thumb-line gallery-thumb-line--location">Singapore</li>
+            </ul>
+          </div>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
-        <div class="gallery-card">
+        <div class="gallery-card gallery-card--thumb-detail">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-3.png" alt="Mazda 3 Sedan" class="gallery-card-image" />
-            <span class="gallery-tag">Japanese Sedan</span>
+            <img src="/gallery-4.png" alt="Gold A7" class="gallery-card-image" />
+            <span class="gallery-tag">Continental</span>
           </div>
-          <h3 class="gallery-card-title">Mazda 3 Sedan</h3>
-          <p class="gallery-card-price">$45,000</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 12,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-4.png" alt="Auto Parts Shipment" class="gallery-card-image" />
-            <span class="gallery-tag">Spare Parts</span>
+          <div class="gallery-thumb-meta">
+            <ul class="gallery-thumb-details-column">
+              <li class="gallery-thumb-line gallery-thumb-line--model">Gold A7</li>
+              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage 71,000 km</li>
+              <li class="gallery-thumb-line gallery-thumb-line--location">Singapore</li>
+            </ul>
           </div>
-          <h3 class="gallery-card-title">Auto Parts Shipment</h3>
-          <p class="gallery-card-price">Various</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
         <div class="gallery-card">
@@ -137,46 +201,34 @@ export function render(_url) {
           </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
-        <div class="gallery-card">
+        <div class="gallery-card gallery-card--caption-only">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-7.png" alt="Dismantled Vehicles" class="gallery-card-image" />
-            <span class="gallery-tag">Parts Stock</span>
-          </div>
-          <h3 class="gallery-card-title">Dismantled Vehicles</h3>
-          <p class="gallery-card-price">Various</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> Various</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> Parts</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-8.png" alt="Premium Salvage" class="gallery-card-image" />
-            <span class="gallery-tag">Salvage</span>
-          </div>
-          <h3 class="gallery-card-title">Premium Salvage Stock</h3>
-          <p class="gallery-card-price">Inquiry</p>
-          <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> Various</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> As-is</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
-          </ul>
-          <a href="#contact" class="gallery-btn">Request Details</a>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-card-image-wrap">
-            <img src="/gallery-9.png" alt="Steering & Body Parts" class="gallery-card-image" />
+            <img src="/gallery-7.png" alt="Container Loading" class="gallery-card-image" />
             <span class="gallery-tag">Spare Parts</span>
           </div>
-          <h3 class="gallery-card-title">Steering & Body Parts</h3>
-          <p class="gallery-card-price">Various</p>
+          <h3 class="gallery-card-title gallery-card-title--solo-caption">Container Loading</h3>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-3.png" alt="Mazda 3 Sedan" class="gallery-card-image" />
+            <span class="gallery-tag">Japanese Sedan</span>
+          </div>
+          <h3 class="gallery-card-title">Mazda 3 Sedan</h3>
+          <p class="gallery-card-price">$45,000</p>
           <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
+            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
+            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 12,000 km</li>
             <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
           </ul>
+          <a href="#contact" class="gallery-btn">Request Details</a>
+        </div>
+        <div class="gallery-card gallery-card--caption-only">
+          <div class="gallery-card-image-wrap">
+            <img src="/gallery-9.png" alt="Engines" class="gallery-card-image" />
+            <span class="gallery-tag">Spare Parts</span>
+          </div>
+          <h3 class="gallery-card-title gallery-card-title--solo-caption">Engines</h3>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
       </div>
@@ -259,10 +311,10 @@ export function render(_url) {
           <h3 class="social-card-title">YouTube</h3>
           <p class="social-card-desc">Watch detailed vehicle reviews, walkarounds, and export process <strong>Bilawal Motors</strong> <span class="social-arrow">→</span></p>
         </a>
-        <a href="https://wa.me/6512345676" target="_blank" rel="noopener" class="social-card social-card--whatsapp">
+        <a href="https://wa.me/6590357663" target="_blank" rel="noopener" class="social-card social-card--whatsapp">
           <span class="social-card-icon social-card-icon--whatsapp" aria-hidden="true"></span>
           <h3 class="social-card-title">WhatsApp</h3>
-          <p class="social-card-desc">Get instant responses to your queries. Chat with us directly for quick support <strong>+65 1234 5676</strong> <span class="social-arrow">→</span></p>
+          <p class="social-card-desc">Get instant responses to your queries. Chat with us directly for quick support <strong>+65 9035 7663</strong> <span class="social-arrow">→</span></p>
         </a>
       </div>
       <div class="dont-miss-out">
@@ -271,7 +323,7 @@ export function render(_url) {
         <div class="dont-miss-buttons">
           <a href="https://instagram.com/bilawamotors" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--instagram">Follow on Instagram</a>
           <a href="https://youtube.com/@bilawalmotors" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--youtube">Subscribe on YouTube</a>
-          <a href="https://wa.me/6512345676" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--whatsapp">Chat on WhatsApp</a>
+          <a href="https://wa.me/6590357663" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--whatsapp">Chat on WhatsApp</a>
         </div>
       </div>
     </section>
@@ -288,7 +340,7 @@ export function render(_url) {
             <label for="contact-email">Email</label>
             <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
             <label for="contact-phone">Phone</label>
-            <input type="tel" id="contact-phone" name="phone" placeholder="+1 234 567 8900" />
+            <input type="tel" id="contact-phone" name="phone" placeholder="+65 9035 7663" />
             <label for="contact-message">Message</label>
             <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
             <button type="submit" class="contact-submit">Send Message</button>
@@ -300,29 +352,29 @@ export function render(_url) {
             <span class="contact-detail-icon contact-icon--address" aria-hidden="true"></span>
             <div>
               <strong>Address</strong><br />
-              Singapore Business District<br />
-              Singapore
+              Blk 45 Chai Chee Street #04-140<br />
+              Singapore 461045
             </div>
           </div>
           <div class="contact-detail">
             <span class="contact-detail-icon contact-icon--phone" aria-hidden="true"></span>
             <div>
               <strong>Phone</strong><br />
-              +65 1234 5578
+              <a href="tel:+6590357663">+65 9035 7663</a>
             </div>
           </div>
           <div class="contact-detail">
             <span class="contact-detail-icon contact-icon--email" aria-hidden="true"></span>
             <div>
               <strong>Email</strong><br />
-              info@bilawalmotors.com
+              <a href="mailto:Bilawalmotors.bm@gmail.com">Bilawalmotors.bm@gmail.com</a>
             </div>
           </div>
           <h3 class="contact-panel-title contact-panel-title--connect">Connect With Us</h3>
           <div class="contact-social-icons">
             <a href="https://instagram.com/bilawamotors" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--instagram" aria-label="Instagram"></a>
             <a href="https://youtube.com/@bilawalmotors" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--youtube" aria-label="YouTube"></a>
-            <a href="https://wa.me/6512345676" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--whatsapp" aria-label="WhatsApp"></a>
+            <a href="https://wa.me/6590357663" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--whatsapp" aria-label="WhatsApp"></a>
           </div>
           <p class="contact-connect-desc">Follow us on Instagram and YouTube for latest inventory updates. Chat with us on WhatsApp for quick inquiries.</p>
           <div class="business-hours">
