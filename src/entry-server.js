@@ -1,14 +1,14 @@
 /** Gallery images (used in home gallery section and lightbox) */
 const GALLERY_IMAGES = [
-  { src: '/gallery-1.jpeg', alt: 'BMW X1', tag: 'BMW', title: 'BMW X1', price: 'Inquiry', year: '', km: '65,000 km', location: 'Singapore' },
+  { src: '/gallery-1.png', alt: 'BMW X1', tag: 'BMW', title: 'BMW X1', price: 'Inquiry', year: '', km: '65,000 km', location: 'Singapore' },
   { src: '/gallery-2.jpeg', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '52,000 km', location: 'Singapore' },
   { src: '/gallery-8.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '', year: '', km: '62,000 km', location: 'Singapore' },
   { src: '/gallery-4.png', alt: 'Gold A7', tag: 'Continental', title: 'Gold A7', price: '', year: '', km: '71,000 km', location: 'Singapore' },
   { src: '/gallery-5.png', alt: 'Body Panels & Engines', tag: 'Spare Parts', title: 'Body Panels & Engines', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
   { src: '/gallery-6.png', alt: 'Salvage Vehicles', tag: 'Salvage Stock', title: 'Salvage Vehicles', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
-  { src: '/gallery-7.png', alt: 'Container Loading', tag: 'Spare Parts', title: 'Container Loading', price: '', year: '', km: '', location: '' },
-  { src: '/gallery-3.png', alt: 'Mazda 3 Sedan', tag: 'Japanese Sedan', title: 'Mazda 3 Sedan', price: '$45,000', year: '2023', km: '12,000 km', location: 'Singapore' },
-  { src: '/gallery-9.png', alt: 'Engines', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: '' },
+  { src: '/gallery-7.png', alt: 'Container Loading', tag: 'Spare Parts', title: 'Container Loading', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-3.png', alt: 'Salvage Car Load', tag: 'Japanese Sedan', title: 'Salvage Car Load', price: '$45,000', year: '2023', km: '12,000 km', location: 'Singapore' },
+  { src: '/gallery-9.png', alt: 'Engines', tag: 'Spare Parts', title: 'Engines', price: '', year: '', km: '', location: 'Singapore' },
   { src: '/gallery-extra-1.png', alt: 'BMW 1 Series hatchback, Singapore', tag: 'BMW', title: 'BMW 1 Series', price: '', year: '', km: '', location: 'Singapore' },
   { src: '/gallery-extra-2.png', alt: 'Mazda 3 red, Singapore', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '', year: '', km: '', location: 'Singapore' },
   { src: '/gallery-extra-3.png', alt: 'Nissan Qashqai silver, Singapore', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '', location: 'Singapore' },
@@ -118,7 +118,7 @@ export function render(_url) {
         <div class="gallery-card gallery-card--thumb-detail">
           <div class="gallery-card-image-wrap gallery-card-image-wrap--white-frame">
             <div class="gallery-thumb-white">
-              <img src="/gallery-1.jpeg" alt="BMW X1" class="gallery-card-image gallery-card-image--thumb" />
+              <img src="/gallery-1.png" alt="BMW X1" class="gallery-card-image gallery-card-image--thumb" />
             </div>
             <span class="gallery-tag">BMW</span>
           </div>
@@ -179,11 +179,8 @@ export function render(_url) {
             <span class="gallery-tag">Spare Parts</span>
           </div>
           <h3 class="gallery-card-title">Body Panels & Engines</h3>
-          <p class="gallery-card-price">Various</p>
           <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> New</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> N/A</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+            <li class="gallery-card-detail--location">Singapore</li>
           </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
@@ -193,11 +190,8 @@ export function render(_url) {
             <span class="gallery-tag">Salvage Stock</span>
           </div>
           <h3 class="gallery-card-title">Salvage Vehicles</h3>
-          <p class="gallery-card-price">Inquiry</p>
           <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> Various</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> As-is</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+            <li class="gallery-card-detail--location">Singapore</li>
           </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
@@ -207,19 +201,19 @@ export function render(_url) {
             <span class="gallery-tag">Spare Parts</span>
           </div>
           <h3 class="gallery-card-title gallery-card-title--solo-caption">Container Loading</h3>
+          <ul class="gallery-card-details">
+            <li class="gallery-card-detail--location">Singapore</li>
+          </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
         <div class="gallery-card">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-3.png" alt="Mazda 3 Sedan" class="gallery-card-image" />
+            <img src="/gallery-3.png" alt="Salvage Car Load" class="gallery-card-image" />
             <span class="gallery-tag">Japanese Sedan</span>
           </div>
-          <h3 class="gallery-card-title">Mazda 3 Sedan</h3>
-          <p class="gallery-card-price">$45,000</p>
+          <h3 class="gallery-card-title">Salvage Car Load</h3>
           <ul class="gallery-card-details">
-            <li><span class="gallery-detail-icon gallery-icon--year"></span> 2023</li>
-            <li><span class="gallery-detail-icon gallery-icon--odo"></span> 12,000 km</li>
-            <li><span class="gallery-detail-icon gallery-icon--pin"></span> Singapore</li>
+            <li class="gallery-card-detail--location">Singapore</li>
           </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
@@ -229,6 +223,9 @@ export function render(_url) {
             <span class="gallery-tag">Spare Parts</span>
           </div>
           <h3 class="gallery-card-title gallery-card-title--solo-caption">Engines</h3>
+          <ul class="gallery-card-details">
+            <li class="gallery-card-detail--location">Singapore</li>
+          </ul>
           <a href="#contact" class="gallery-btn">Request Details</a>
         </div>
       </div>
