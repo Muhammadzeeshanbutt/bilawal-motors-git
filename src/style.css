@@ -1598,7 +1598,8 @@ body {
 /* ========== Responsive: Mobile ========== */
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
+    /* Leave space for fixed mobile bottom navigation bar */
+    min-height: calc(100vh - 70px - env(safe-area-inset-bottom));
   }
   .hero-bg {
     background-size: contain;
@@ -1837,6 +1838,10 @@ body {
 
 /* ========== Responsive: Small mobile ========== */
 @media (max-width: 480px) {
+  .hero {
+    /* Slightly smaller reserved space on smaller phones */
+    min-height: calc(100vh - 60px - env(safe-area-inset-bottom));
+  }
   .hero-bg {
     background-size: contain;
     background-position: center top;
