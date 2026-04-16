@@ -3,8 +3,8 @@ const GALLERY_IMAGES = [
   { src: '/gallery-1.png', alt: 'BMW X1', tag: 'BMW', title: 'BMW X1', price: 'Inquiry', year: '', km: '65,000 km', location: 'Singapore' },
   { src: '/gallery-2.jpeg', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '52,000 km', location: 'Singapore' },
   { src: '/gallery-8.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '', year: '', km: '62,000 km', location: 'Singapore' },
-  { src: '/gallery-4.png', alt: 'Gold A7', tag: 'Continental', title: 'Gold A7', price: '', year: '', km: '71,000 km', location: 'Singapore' },
-  { src: '/gallery-5.png', alt: 'Body Panels & Engines', tag: 'Spare Parts', title: 'Body Panels & Engines', price: 'Various', year: 'New', km: 'N/A', location: 'Singapore' },
+  { src: '/gallery-4.png', alt: 'White Volkswagen Golf, front view, Singapore', tag: 'Continental', title: 'Volkswagen Golf', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-5.png', alt: 'Complete cars loading: Mazda stacked above white BMW sedan secured inside shipping container, Singapore', tag: 'Export', title: 'Complete Cars Loading', price: '', year: '', km: '', location: 'Singapore' },
   { src: '/gallery-6.png', alt: 'Salvage Vehicles', tag: 'Salvage Stock', title: 'Salvage Vehicles', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
   { src: '/gallery-7.png', alt: 'Container Loading', tag: 'Spare Parts', title: 'Container Loading', price: '', year: '', km: '', location: 'Singapore' },
   { src: '/gallery-3.png', alt: 'Salvage Car Load', tag: 'Japanese Sedan', title: 'Salvage Car Load', price: '$45,000', year: '2023', km: '12,000 km', location: 'Singapore' },
@@ -161,13 +161,13 @@ export function render(_url) {
         </div>
         <div class="gallery-card gallery-card--thumb-detail">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-4.png" alt="Gold A7" class="gallery-card-image" />
+            <img src="/gallery-4.png" alt="White Volkswagen Golf, front view, Singapore" class="gallery-card-image" />
             <span class="gallery-tag">Continental</span>
           </div>
           <div class="gallery-thumb-meta">
             <ul class="gallery-thumb-details-column">
-              <li class="gallery-thumb-line gallery-thumb-line--model">Gold A7</li>
-              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage 71,000 km</li>
+              <li class="gallery-thumb-line gallery-thumb-line--model">Volkswagen Golf</li>
+              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage on inquiry</li>
               <li class="gallery-thumb-line gallery-thumb-line--location">Singapore</li>
             </ul>
           </div>
@@ -175,10 +175,10 @@ export function render(_url) {
         </div>
         <div class="gallery-card">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-5.png" alt="Body Panels & Engines" class="gallery-card-image" />
-            <span class="gallery-tag">Spare Parts</span>
+            <img src="/gallery-5.png" alt="Complete cars loading: Mazda stacked above white BMW sedan secured inside shipping container, Singapore" class="gallery-card-image" />
+            <span class="gallery-tag">Export</span>
           </div>
-          <h3 class="gallery-card-title">Body Panels & Engines</h3>
+          <h3 class="gallery-card-title">Complete Cars Loading</h3>
           <ul class="gallery-card-details">
             <li class="gallery-card-detail--location">Singapore</li>
           </ul>
@@ -298,12 +298,12 @@ export function render(_url) {
       </h2>
       <p class="stay-connected-subtitle">Follow us on social media for the latest updates, exclusive deals, and behind-the-scenes content.</p>
       <div class="stay-connected-cards">
-        <a href="https://instagram.com/bilawamotors" target="_blank" rel="noopener" class="social-card social-card--instagram">
+        <a href="https://www.instagram.com/bilawalmotors?igsh=NHdkMG1wdDRydDEw&amp;utm_source=qr" target="_blank" rel="noopener" class="social-card social-card--instagram">
           <span class="social-card-icon social-card-icon--instagram" aria-hidden="true"></span>
           <h3 class="social-card-title">Instagram</h3>
-          <p class="social-card-desc">Daily updates of our latest vehicles and exclusive behind-the-scenes content <strong>@bilawamotors</strong> <span class="social-arrow">→</span></p>
+          <p class="social-card-desc">Daily updates of our latest vehicles and exclusive behind-the-scenes content <strong>@bilawalmotors</strong> <span class="social-arrow">→</span></p>
         </a>
-        <a href="https://youtube.com/@bilawalmotors" target="_blank" rel="noopener" class="social-card social-card--youtube">
+        <a href="https://www.youtube.com/@BilawalMotors" target="_blank" rel="noopener" class="social-card social-card--youtube">
           <span class="social-card-icon social-card-icon--youtube" aria-hidden="true"></span>
           <h3 class="social-card-title">YouTube</h3>
           <p class="social-card-desc">Watch detailed vehicle reviews, walkarounds, and export process <strong>Bilawal Motors</strong> <span class="social-arrow">→</span></p>
@@ -318,8 +318,8 @@ export function render(_url) {
         <h3 class="dont-miss-title">Don't Miss Out!</h3>
         <p class="dont-miss-desc">Join thousands of satisfied customers who trust Bilawal Motors for their vehicle import and export needs. Follow us today for exclusive deals and early access to new inventory.</p>
         <div class="dont-miss-buttons">
-          <a href="https://instagram.com/bilawamotors" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--instagram">Follow on Instagram</a>
-          <a href="https://youtube.com/@bilawalmotors" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--youtube">Subscribe on YouTube</a>
+          <a href="https://www.instagram.com/bilawalmotors?igsh=NHdkMG1wdDRydDEw&amp;utm_source=qr" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--instagram">Follow on Instagram</a>
+          <a href="https://www.youtube.com/@BilawalMotors" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--youtube">Subscribe on YouTube</a>
           <a href="https://wa.me/6590357663" target="_blank" rel="noopener" class="dont-miss-btn dont-miss-btn--whatsapp">Chat on WhatsApp</a>
         </div>
       </div>
@@ -369,8 +369,8 @@ export function render(_url) {
           </div>
           <h3 class="contact-panel-title contact-panel-title--connect">Connect With Us</h3>
           <div class="contact-social-icons">
-            <a href="https://instagram.com/bilawamotors" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--instagram" aria-label="Instagram"></a>
-            <a href="https://youtube.com/@bilawalmotors" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--youtube" aria-label="YouTube"></a>
+            <a href="https://www.instagram.com/bilawalmotors?igsh=NHdkMG1wdDRydDEw&amp;utm_source=qr" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--instagram" aria-label="Instagram"></a>
+            <a href="https://www.youtube.com/@BilawalMotors" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--youtube" aria-label="YouTube"></a>
             <a href="https://wa.me/6590357663" target="_blank" rel="noopener" class="contact-social-icon contact-social-icon--whatsapp" aria-label="WhatsApp"></a>
           </div>
           <p class="contact-connect-desc">Follow us on Instagram and YouTube for latest inventory updates. Chat with us on WhatsApp for quick inquiries.</p>
