@@ -3,7 +3,7 @@ const GALLERY_IMAGES = [
   { src: '/gallery-1.png', alt: 'BMW X1', tag: 'BMW', title: 'BMW X1', price: 'Inquiry', year: '', km: '65,000 km', location: 'Singapore' },
   { src: '/gallery-2.jpeg', alt: 'Nissan Qashqai', tag: 'Japanese SUV', title: 'Nissan Qashqai', price: '', year: '', km: '52,000 km', location: 'Singapore' },
   { src: '/gallery-8.png', alt: 'Mazda 3', tag: 'Japanese Hatchback', title: 'Mazda 3', price: '', year: '', km: '62,000 km', location: 'Singapore' },
-  { src: '/gallery-4.png', alt: 'White Volkswagen Golf, front view, Singapore', tag: 'Continental', title: 'Volkswagen Golf', price: '', year: '', km: '', location: 'Singapore' },
+  { src: '/gallery-4.png', alt: 'Gold A7, Singapore', tag: 'Continental', title: 'Gold A7', price: '', year: '', km: '71,000 km', location: 'Singapore' },
   { src: '/gallery-5.png', alt: 'Complete cars loading: Mazda stacked above white BMW sedan secured inside shipping container, Singapore', tag: 'Export', title: 'Complete Cars Loading', price: '', year: '', km: '', location: 'Singapore' },
   { src: '/gallery-6.png', alt: 'Salvage Vehicles', tag: 'Salvage Stock', title: 'Salvage Vehicles', price: 'Inquiry', year: 'Various', km: 'As-is', location: 'Singapore' },
   { src: '/gallery-7.png', alt: 'Container Loading', tag: 'Spare Parts', title: 'Container Loading', price: '', year: '', km: '', location: 'Singapore' },
@@ -161,13 +161,13 @@ export function render(_url) {
         </div>
         <div class="gallery-card gallery-card--thumb-detail">
           <div class="gallery-card-image-wrap">
-            <img src="/gallery-4.png" alt="White Volkswagen Golf, front view, Singapore" class="gallery-card-image" />
+            <img src="/gallery-4.png" alt="Gold A7, Singapore" class="gallery-card-image" />
             <span class="gallery-tag">Continental</span>
           </div>
           <div class="gallery-thumb-meta">
             <ul class="gallery-thumb-details-column">
-              <li class="gallery-thumb-line gallery-thumb-line--model">Volkswagen Golf</li>
-              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage on inquiry</li>
+              <li class="gallery-thumb-line gallery-thumb-line--model">Gold A7</li>
+              <li class="gallery-thumb-line gallery-thumb-line--mileage">Mileage 71,000 km</li>
               <li class="gallery-thumb-line gallery-thumb-line--location">Singapore</li>
             </ul>
           </div>
