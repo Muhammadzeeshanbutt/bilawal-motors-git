@@ -1597,6 +1597,22 @@ body {
 
 /* ========== Responsive: Mobile ========== */
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero-bg {
+    background-size: contain;
+    background-position: center top;
+    background-color: #1a1a1a;
+  }
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.35) 28%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+  }
   .hero-header {
     padding: 0.75rem 0.75rem;
   }
@@ -1821,6 +1837,10 @@ body {
 
 /* ========== Responsive: Small mobile ========== */
 @media (max-width: 480px) {
+  .hero-bg {
+    background-size: contain;
+    background-position: center top;
+  }
   .hero-header {
     padding: 0.5rem 0.5rem;
   }
